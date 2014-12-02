@@ -1,0 +1,35 @@
+#box1{
+	height: 100px;
+	width: 100px;
+	border:1px solid red;
+}
+/*slider css*/
+.slider{
+	width: 960px;
+	height: 400px;
+	overflow: hidden;
+	position: relative;
+}
+.slider #left{
+	left: 0px;
+	position: absolute;
+	top:150px;
+}
+.slider #right{
+	right: 0px;
+	position: absolute;
+	top:150px;
+}
+.slider ul{
+	width: 10000px;
+	list-style: none;
+}
+.slider ul li{
+	float: left;
+
+}
+.slider ul li img{
+	width:960px;
+	height: 400px;
+	top: 0px;
+}
