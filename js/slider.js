@@ -50,9 +50,6 @@ function Animator(){
 		counter=0;
 		clearInterval(that.intervalId);
 	}
-	// this.autoAnimation=function (){
-	// 	autoInterval=setInterval(that.animate, 4000);
-	// }	
 }
 function Slider(){
 	this.slider=document.getElementsByClassName("slider");
@@ -62,6 +59,7 @@ function Slider(){
 	this.init=function (){
 		a=new Animator();
 		thats.putButtons();
+		thats.autoAnimation();
 	}
 	this.putButtons=function(){
 		// puts left and right buttons in sliders and call onclick actions
@@ -78,15 +76,22 @@ function Slider(){
 		
 	}
 	this.moveLeft=function (){
+			clearInterval(autoInterval);
+			autoInterval=setInterval(thats.moveRight, 4000);//clears auto interval and sets it again
 			a.stop();
 			thats.marginCount+=960;
 			a.animate(thats.listSlider,{marginLeft:960},2000,function(){console.log('done');});		
 			}
 	this.moveRight=function (){
+			clearInterval(autoInterval);
+			autoInterval=setInterval(thats.moveRight, 4000);//clears auto interval and sets it again
 			a.stop();
 			thats.marginCount-=960;
 			a.animate(thats.listSlider,{marginLeft:-960},2000,function(){console.log('done');});
-	}	
+	}
+	this.autoAnimation=function (){
+		autoInterval=setInterval(thats.moveRight, 4000);
+	}
 }
 var s= new Slider();
 s.init();
