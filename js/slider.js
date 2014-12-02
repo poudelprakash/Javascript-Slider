@@ -49,13 +49,10 @@ function Animator(){
 		}
 		counter=0;
 		clearInterval(that.intervalId);
-		
-
 	}
-	this.autoAnimation=function (){
-		autoInterval=setInterval(that.animate, 4000);
-	}
-	
+	// this.autoAnimation=function (){
+	// 	autoInterval=setInterval(that.animate, 4000);
+	// }	
 }
 function Slider(){
 	this.slider=document.getElementsByClassName("slider");
@@ -89,8 +86,7 @@ function Slider(){
 			a.stop();
 			thats.marginCount-=960;
 			a.animate(thats.listSlider,{marginLeft:-960},2000,function(){console.log('done');});
-	}
-	
+	}	
 }
 var s= new Slider();
 s.init();
