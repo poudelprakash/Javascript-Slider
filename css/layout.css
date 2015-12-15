@@ -10,12 +10,12 @@
 	overflow: hidden;
 	position: relative;
 }
-.slider #left{
+.slider #left-arrow{
 	left: 0px;
 	position: absolute;
 	top:150px;
 }
-.slider #right{
+.slider #right-arrow{
 	right: 0px;
 	position: absolute;
 	top:150px;
